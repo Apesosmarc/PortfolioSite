@@ -1,0 +1,95 @@
+:root {
+  --primary-dark: #02343f;
+  --primary-light: #f0edcc;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-family: "Poppins", sans-serif;
+}
+
+/* MAIN LAYOUT */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(0.5em, 1fr) minmax(0px, 500px) minmax(
+      0.5em,
+      1fr
+    );
+  grid-column-gap: 2em;
+
+  grid-template-areas:
+    ". header ."
+    ". hero ."
+    ". techskills ."
+    ". projects ."
+    ". contact ."
+    ". footer .";
+}
+
+header {
+  grid-area: header;
+}
+
+.hero {
+  grid-area: hero;
+  height: 100vh;
+}
+
+.techskills {
+  grid-area: techskills;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.project-list {
+  grid-area: project-list;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* FONT */
+
+.name-header {
+  letter-spacing: 5px;
+  font-weight: 700;
+  padding: 0;
+  font-size: 3.8rem;
+}
+
+.navbar-item {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-right: 1em;
+  text-transform: uppercase;
+}
+.navbar-item:hover {
+  opacity: 0.7;
+}
+
+/* HEADER */
+
+nav {
+  padding: 2em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* HERO */
+
+.apesos-summary {
+  text-align: center;
+}
