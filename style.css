@@ -19,7 +19,6 @@ body {
       0.5em,
       1fr
     );
-  grid-column-gap: 2em;
 
   grid-template-areas:
     ". header ."
@@ -148,17 +147,19 @@ nav {
 
 .navbar-item-container::after {
   content: "";
-  width: 60%;
-  height: 3%;
-  top: 90%;
-  left: 12%;
   position: absolute;
-  background: var(--primary-light);
-  opacity: 0.6;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  background-color: var(--primary-light);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
-.navbar-item-container::after:hover {
-  display: none;
+.navbar-item-container:hover::after {
+  visibility: visible;
+  width: 100%;
 }
 .navbar-item:hover {
   opacity: 0.7;
@@ -175,11 +176,14 @@ nav {
   text-align: center;
 }
 
-.apesos-summary {
-  width: 100%;
-}
-
 .resume-buttons-nav {
   margin-top: 2rem;
-  width: 80%;
+  width: 95%;
+}
+
+.social-icons-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
 }
