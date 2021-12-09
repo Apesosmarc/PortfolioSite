@@ -32,6 +32,7 @@ body {
 
 header {
   grid-area: header;
+  margin-bottom: 4rem;
 }
 
 .hero {
@@ -61,23 +62,64 @@ footer {
 
 /* FONT */
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 .name-header {
   letter-spacing: 5px;
   font-weight: 700;
   padding: 0;
   font-size: 3.8rem;
+  line-height: 3.9rem;
 }
 
-.navbar-item {
+.name-title {
+  margin-top: 1rem;
   font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  display: inline-block;
-  margin-right: 1em;
-  text-transform: uppercase;
+  opacity: 0.9;
+  letter-spacing: 1px;
 }
-.navbar-item:hover {
-  opacity: 0.7;
+
+/* BUTTONS */
+.button {
+  padding: 5px 15px;
+  font-size: 1rem;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border: 3px solid var(--primary-light);
+
+  box-shadow: silver 2px 2px 0px 0px;
+  cursor: pointer;
+}
+
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+}
+
+.btn-rect-to-round {
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-in 0s;
+  border: 4px double var(--primary-light);
+  color: var(--primary-light) !important;
+}
+
+.btn-rect-to-round:hover {
+  border-radius: 60px;
+  color: var(--primary-dark) !important;
+  border-color: var(--primary-light);
+  background: var(--primary-light);
 }
 
 /* HEADER */
@@ -88,8 +130,56 @@ nav {
   justify-content: space-between;
 }
 
+.navbar-item-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.5em;
+}
+
+.navbar-item {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-right: 1em;
+  text-transform: uppercase;
+}
+
+.navbar-item-container::after {
+  content: "";
+  width: 60%;
+  height: 3%;
+  top: 90%;
+  left: 12%;
+  position: absolute;
+  background: var(--primary-light);
+  opacity: 0.6;
+}
+
+.navbar-item-container::after:hover {
+  display: none;
+}
+.navbar-item:hover {
+  opacity: 0.7;
+}
+
 /* HERO */
 
-.apesos-summary {
+.title-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.apesos-summary {
+  width: 100%;
+}
+
+.resume-buttons-nav {
+  margin-top: 2rem;
+  width: 80%;
 }
