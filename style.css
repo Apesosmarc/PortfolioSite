@@ -11,6 +11,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* should remove orange outline on inputs */
+*:focus {
+  outline: none;
+}
+
 img {
   width: auto;
 }
@@ -39,7 +44,6 @@ header {
 
 .hero {
   grid-area: hero;
-  height: 100vh;
 }
 
 .techskills {
@@ -47,10 +51,14 @@ header {
 }
 
 .projects {
-  padding: 8rem 0;
+  padding: 4rem 0.2rem 8rem;
   background-color: var(--primary-light);
   color: var(--primary-dark);
   grid-area: projects;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .project-list {
@@ -88,6 +96,10 @@ h3 {
   letter-spacing: 1px;
 }
 
+.projects-title {
+  font-size: 3rem;
+}
+
 /* BUTTONS */
 .button {
   padding: 5px 15px;
@@ -113,11 +125,19 @@ h3 {
 .btn-rect-to-round {
   font-size: 16px;
   font-weight: 600;
-  background: transparent;
+  background: inherit;
   cursor: pointer;
   transition: all 0.5s ease-in 0s;
-  border: 4px double var(--primary-light);
+}
+
+.btn-rect-to-round--light {
   color: var(--primary-light) !important;
+  border: 4px double var(--primary-light);
+}
+
+.btn-rect-to-round--dark {
+  border: 4px double var(--primary-dark);
+  color: var(--primary-dark) !important;
 }
 
 .btn-rect-to-round:hover {
@@ -185,7 +205,7 @@ nav {
 }
 
 .social-icons-nav {
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 4rem;
@@ -240,3 +260,82 @@ figure {
 -- small //<550px
 --  medium
 -- large */
+
+/* PROJECTS */
+
+.project {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.project-img-container {
+  min-height: 200px;
+  min-width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: rgb(0 0 0) 0px 5px 10px 0px;
+}
+
+.project-img-container--nhl {
+  background-image: url("./images/appimages/nhlapp.jpg");
+}
+.project-img-container--stonks {
+  background-image: url("./images/appimages/stonkwatchList.jpg");
+}
+.project-img-container--blackjack {
+  background-image: url("./images/appimages/blackjack.jpg");
+}
+
+.project-skills-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.project-skill {
+  padding: 0.2em;
+  border-bottom: 1px solid var(--primary-dark);
+  border-top: 1px solid var(--primary-dark);
+  margin-right: 1em;
+}
+
+.project-btn-container {
+  display: flex;
+  gap: 1em;
+}
+
+/* CONTACT FORM STYLING */
+
+.contact-form {
+  width: 100%;
+
+  padding: 0 0.2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  padding: 0.7rem;
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-light);
+  border-radius: 10px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.width-75 {
+  width: 75%;
+  align-self: center;
+  margin-top: 2rem;
+}
