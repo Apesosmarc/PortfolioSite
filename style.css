@@ -122,10 +122,9 @@ h3 {
 .button {
   padding: 5px 15px;
   font-size: 1rem;
-  background: var(--primary-light);
+  background: inherit;
   color: var(--primary-dark);
   border: 3px solid var(--primary-light);
-
   box-shadow: silver 2px 2px 0px 0px;
   cursor: pointer;
 }
@@ -160,9 +159,21 @@ h3 {
 
 .btn-rect-to-round:hover {
   border-radius: 60px;
-  color: var(--primary-dark) !important;
+  border-color: var(--primary-light);
+}
+
+.btn-rect-to-roun--light:hover {
+  border-radius: 60px;
+  color: var(--primary-light) !important;
   border-color: var(--primary-light);
   background: var(--primary-light);
+}
+
+.btn-rect-to-round--dark:hover {
+  border-radius: 60px;
+  color: var(--primary-light) !important;
+  border-color: var(--primary-light);
+  background: var(--primary-dark);
 }
 
 /* HEADER */
@@ -223,16 +234,14 @@ nav {
 }
 
 .social-icons-nav {
-  width: 95%;
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 4rem;
 }
 
 .typing-animation {
   /* shorthand for animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
   /* steps(number of steps, direction) example a clock minute hand would take 60s to move 60 steps to do a 360 rotation */
-  height: 48px;
+  height: 32px;
   white-space: nowrap;
   overflow: hidden;
 
@@ -273,25 +282,45 @@ nav {
 
 @media (min-width: 650px) {
   .hero {
-    flex-direction: row;
+    padding-top: 5rem;
+    height: 90vh;
     display: flex;
-    gap: 5rem;
+    flex-direction: row;
+    align-items: start;
   }
   .title-section {
-    padding-right: 5rem;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     text-align: left;
-    width: 50%;
-    display: relative;
-    border-right: 1px solid orange;
+    width: 35%;
+    border-right: 1px solid var(--primary-light);
+  }
+  .info-section {
+    width: 60%;
+    padding: 1rem 0 0 3rem;
   }
   .name-header {
     line-height: 5rem;
   }
 
-  .info-section {
-    width: 50%;
+  .resume-buttons-container {
+    width: 80%;
+  }
+
+  #border {
+    border-bottom: solid 3px var(--primary-light);
+    position: absolute;
+    right: -7px;
+    width: 20px;
+    animation: animated-cursor 600ms steps(35, end) infinite;
+  }
+  @keyframes animated-text {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 260px;
+    }
   }
 }
 
