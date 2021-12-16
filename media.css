@@ -1,0 +1,87 @@
+/* mid: 650-950  */
+
+/* MAIN GRID LAYOUT */
+
+@media (min-width: 650px) {
+  .main-grid {
+    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(
+        1em,
+        1fr
+      );
+
+    grid-template-areas:
+      ". header header header ."
+      ". hero hero hero ."
+      ". techskills techskills techskills ."
+      "projects projects projects projects projects"
+      ". contact contact contact ."
+      ". footer footer footer .";
+  }
+}
+
+/* PROJECTS SECTION */
+@media (min-width: 650px) {
+  .project {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .project-img-container {
+    max-width: 500px;
+  }
+  .project-copy {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 950px) {
+  .project-img-container {
+    min-width: 450px;
+    min-height: 250px;
+  }
+  .project-copy {
+    max-width: 25%;
+  }
+}
+
+/* ANIMATIONS */
+
+/* HTML CSSResult Skip Results Iframe
+EDIT ON
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body{
+  padding: 40px;
+  background-color: #121212;  
+}
+
+p {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+
+/* shorthand for animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
+/* steps(number of steps, direction) example a clock minute hand would take 60s to move 60 steps to do a 360 rotation */
+/* p {
+  animation: animated-text 4s steps(29,end) 2s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+/* @keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+/* @keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+/* } */

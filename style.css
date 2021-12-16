@@ -37,6 +37,23 @@ img {
     ". footer .";
 }
 
+@media (min-width: 600px) {
+  .main-grid {
+    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(
+        1em,
+        1fr
+      );
+
+    grid-template-areas:
+      ". header header header ."
+      ". hero hero hero ."
+      ". techskills techskills techskills ."
+      "projects projects projects projects projects"
+      ". contact contact contact ."
+      ". footer footer footer .";
+  }
+}
+
 header {
   grid-area: header;
   margin-bottom: 4rem;
@@ -59,6 +76,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .project-list {
@@ -199,7 +217,7 @@ nav {
   text-align: center;
 }
 
-.resume-buttons-nav {
+.resume-buttons-container {
   margin-top: 2rem;
   width: 95%;
 }
@@ -209,6 +227,72 @@ nav {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 4rem;
+}
+
+.typing-animation {
+  /* shorthand for animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
+  /* steps(number of steps, direction) example a clock minute hand would take 60s to move 60 steps to do a 360 rotation */
+  height: 48px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-size: 16px;
+  color: var(--primary-light);
+  position: relative;
+  animation: animated-text 2000ms steps(30, end) 1s 1 normal both;
+}
+
+#border {
+  border-bottom: solid 3px var(--primary-light);
+  position: absolute;
+  right: -7px;
+  width: 20px;
+  animation: animated-cursor 600ms steps(35, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 270px;
+  }
+}
+
+/* cursor animations */
+@keyframes animated-cursor {
+  from {
+    border-bottom-color: var(--primary-light);
+  }
+  to {
+    border-bottom-color: transparent;
+  }
+}
+
+@media (min-width: 650px) {
+  .hero {
+    flex-direction: row;
+    display: flex;
+    gap: 5rem;
+  }
+  .title-section {
+    padding-right: 5rem;
+    justify-content: center;
+    align-items: end;
+    text-align: left;
+    width: 50%;
+    display: relative;
+    border-right: 1px solid orange;
+  }
+  .name-header {
+    line-height: 5rem;
+  }
+
+  .info-section {
+    width: 50%;
+  }
 }
 
 /* TECHSKILLS  */
@@ -266,8 +350,19 @@ figure {
 .project {
   display: flex;
   justify-content: center;
-
   flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 75%; */
+}
+
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  max-width: 85%;
 }
 
 .project-img-container {
@@ -276,7 +371,7 @@ figure {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  max-width: 350px;
   box-shadow: rgb(0 0 0) 0px 5px 10px 0px;
 }
 
@@ -307,6 +402,29 @@ figure {
 .project-btn-container {
   display: flex;
   gap: 1em;
+}
+
+@media (min-width: 650px) {
+  .project {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .project-img-container {
+    max-width: 500px;
+  }
+  .project-copy {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 950px) {
+  .project-img-container {
+    min-width: 450px;
+    min-height: 250px;
+  }
+  .project-copy {
+    max-width: 25%;
+  }
 }
 
 /* CONTACT FORM STYLING */
