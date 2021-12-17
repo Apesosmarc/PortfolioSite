@@ -61,6 +61,7 @@ header {
 
 .hero {
   grid-area: hero;
+  height: 90vh;
 }
 
 .techskills {
@@ -219,9 +220,15 @@ nav {
   text-align: center;
 }
 
+.hero__info-section {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero__resume-buttons-container {
   margin-top: 2rem;
-  width: 95%;
+  align-self: center;
+  width: 300px;
 }
 
 .hero__social-icons-nav {
@@ -277,14 +284,14 @@ nav {
   padding: 0 0 8rem;
 }
 
-.techskills__about-section {
-  width: 50%;
-}
-
 /* LOGO GRID STYLING */
 
 figure {
   margin: 0;
+}
+
+.techskills__about {
+  width: 90%;
 }
 
 .techskills__container {

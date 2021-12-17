@@ -1,5 +1,3 @@
-/* mid: 650-950  */
-
 /* FONT STYLES */
 
 @media (min-width: 950px) {
@@ -41,6 +39,7 @@
     align-items: start;
   }
   .hero__title-section {
+    padding-right: 1.5rem;
     justify-content: center;
     align-items: center;
     text-align: left;
@@ -53,10 +52,6 @@
   }
   .hero__name-header {
     line-height: 5rem;
-  }
-
-  .hero__resume-buttons-container {
-    width: 80%;
   }
 
   #border {
@@ -73,6 +68,14 @@
     100% {
       width: 260px;
     }
+  }
+}
+
+/* BORDER-RIGHT WAS CLIPPING BETWEEN 650-800PX */
+
+@media (min-width: 800px) {
+  .hero__title-section {
+    padding-right: 0;
   }
 }
 
@@ -109,6 +112,9 @@
 }
 
 @media (min-width: 1300px) {
+  .techskills__about-section {
+    width: 50%;
+  }
   .techskills {
     display: flex;
     justify-content: space-between;
