@@ -110,7 +110,7 @@ h2 {
   line-height: 3.9rem;
 }
 
-.name-title {
+.hero__name-title {
   margin-top: 1rem;
   font-size: 0.9rem;
   opacity: 0.9;
@@ -130,61 +130,41 @@ h2 {
 }
 
 /* BUTTONS */
-.button {
-  padding: 5px 15px;
-  font-size: 1rem;
-  background: inherit;
-  color: var(--primary-dark);
-  border: 3px solid var(--primary-light);
-  box-shadow: silver 2px 2px 0px 0px;
-  cursor: pointer;
+button {
+  border: none;
 }
 
 .btn {
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
-}
-
-.btn:hover .btn-slide-show-text1 {
-  margin-left: 65px;
-}
-
-.btn-rect-to-round {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  background: inherit;
   cursor: pointer;
-  transition: all 0.5s ease-in 0s;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
 }
 
-.btn-rect-to-round--light {
-  color: var(--primary-light) !important;
-  border: 4px double var(--primary-light);
+.btn--light {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
 }
 
-.btn-rect-to-round--dark {
-  border: 4px double var(--primary-dark);
-  color: var(--primary-dark) !important;
-}
-
-.btn-rect-to-round:hover {
-  border-radius: 60px;
+.btn--dark {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  border: 5px var(--primary-dark) double;
   border-color: var(--primary-light);
 }
 
-.btn-rect-to-roun--light:hover {
-  border-radius: 60px;
-  color: var(--primary-light) !important;
-  border-color: var(--primary-light);
-  background: var(--primary-light);
+.btn--light:hover {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  border: 1px solid var(--primary-light);
 }
 
-.btn-rect-to-round--dark:hover {
-  border-radius: 60px;
-  color: var(--primary-light) !important;
-  border-color: var(--primary-light);
-  background: var(--primary-dark);
+.btn--dark:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--primary-dark);
 }
 
 /* HEADER */
