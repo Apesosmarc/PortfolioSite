@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apesos Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -79,7 +80,19 @@
 
       <!-- TECH SKILLS SECTION -->
       <section class="techskills">
-          <h1>Tech</h1>
+          <!-- <h1 class="techskills-title">Tech</h1> -->
+          <div class="techskills-about">
+            <h2 class="techskills__headline">Other Cool Headline</h2>
+            <p>
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              libero autem ipsum pariatur, cum quae commodi possimus eos dolorum
+              molestiae quas alias quaerat ex nobis non illo, animi provident
+              quis culpa beatae, voluptas nihil iure facilis reiciendis. Quo
+              doloribus, repellendus suscipit iure eius corrupti modi!
+            </p>
+          </div>
+
+
         <div class="techskills__container">
           <div class="techskills__col">
             <figure class="techskills__item">
@@ -211,24 +224,27 @@
 
       <!-- CONTACT FORM -->
       <section class="contact">
-        <h2 class="contact-header">Contact</h2>
-        <p class="contact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugit quas libero culpa cumque repudiandae. Tenetur ad possimus ea ut.</p>
+        <h1 class="contact__title">Contact</h1>
+        <div class="contact__container">
+          <p class="contact__about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, fugit quas libero culpa cumque repudiandae. Tenetur ad possimus ea ut.</p>
 
-        <form class="contact-form">
-          <label for="contact-form-name display-none"></label>
-          <input type="text" class="contact-form-name" placeholder="Name"/>
-          <label
-            for="contact-form-email display-none"
-            placeholder="name"
-          ></label>
-          <input type="email" class="contact-form-email" placeholder="Email" />
-          <label
-            for="contact-form-message display-none"
-            placeholder="message"
-          ></label>
-          <textarea placeholder="Message"></textarea>
-          <button class="btn btn-rect-to-round btn-rect-to-round--light width-75">Submit</button>
-        </form>
+          <form class="contact__form">
+            <label for="contact-form-name display-none"></label>
+            <input type="text" class="contact-form-name" placeholder="Name"/>
+            <label
+              for="contact-form-email display-none"
+              placeholder="name"
+            ></label>
+            <input type="email" class="contact-form-email" placeholder="Email" />
+            <label
+              for="contact-form-message display-none"
+              placeholder="message"
+            ></label>
+            <textarea placeholder="Message"></textarea>
+            <button class="btn btn-rect-to-round btn-rect-to-round--light width-75">Submit</button>
+          </form>
+        </div>
+      
       </section>
 
     <footer>

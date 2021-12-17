@@ -1,5 +1,16 @@
 /* mid: 650-950  */
 
+/* FONT STYLES */
+
+@media (min-width: 950px) {
+  p {
+    font-size: 1.125rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 /* MAIN GRID LAYOUT */
 
 @media (min-width: 650px) {
@@ -16,6 +27,52 @@
       "projects projects projects projects projects"
       ". contact contact contact ."
       ". footer footer footer .";
+  }
+}
+
+/* HERO SECTION  */
+
+@media (min-width: 650px) {
+  .hero {
+    padding-top: 5rem;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  .title-section {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 35%;
+    border-right: 1px solid var(--primary-light);
+  }
+  .info-section {
+    width: 60%;
+    padding: 1rem 0 0 3rem;
+  }
+  .name-header {
+    line-height: 5rem;
+  }
+
+  .resume-buttons-container {
+    width: 80%;
+  }
+
+  #border {
+    border-bottom: solid 3px var(--primary-light);
+    position: absolute;
+    right: -7px;
+    width: 20px;
+    animation: animated-cursor 600ms steps(35, end) infinite;
+  }
+  @keyframes animated-text {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 260px;
+    }
   }
 }
 
@@ -43,45 +100,28 @@
   }
 }
 
-/* ANIMATIONS */
+/* TECHSKILLS SECTION */
 
-/* HTML CSSResult Skip Results Iframe
-EDIT ON
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
-body{
-  padding: 40px;
-  background-color: #121212;  
+@media (min-width: 550px) {
+  .techskills__img {
+    height: 64px;
+  }
 }
 
-p {
-  border-right: solid 3px rgba(0,255,0,.75);
-  white-space: nowrap;
-  overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 28px;
-  color: rgba(255,255,255,.70);
+@media (min-width: 1300px) {
+  .techskills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .techskills-about {
+    margin: 2rem 4rem 0 0;
+    align-self: start;
+  }
+
+  .techskills__container {
+    min-width: 500px;
+  }
 }
 
-/* Animation */
-
-/* shorthand for animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
-/* steps(number of steps, direction) example a clock minute hand would take 60s to move 60 steps to do a 360 rotation */
-/* p {
-  animation: animated-text 4s steps(29,end) 2s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
-}
-
-/* text animation */
-
-/* @keyframes animated-text{
-  from{width: 0;}
-  to{width: 472px;}
-}
-
-/* cursor animations */
-
-/* @keyframes animated-cursor{
-  from{border-right-color: rgba(0,255,0,.75);}
-  to{border-right-color: transparent;}
-/* } */
+/* CONTACT STYLING */

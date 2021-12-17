@@ -99,6 +99,9 @@ h3 {
   margin: 0;
 }
 
+h2 {
+}
+
 .name-header {
   letter-spacing: 5px;
   font-weight: 700;
@@ -114,8 +117,11 @@ h3 {
   letter-spacing: 1px;
 }
 
-.projects-title {
+.projects-title,
+.contact__title {
   font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 /* BUTTONS */
@@ -280,51 +286,17 @@ nav {
   }
 }
 
-@media (min-width: 650px) {
-  .hero {
-    padding-top: 5rem;
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-  }
-  .title-section {
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    width: 35%;
-    border-right: 1px solid var(--primary-light);
-  }
-  .info-section {
-    width: 60%;
-    padding: 1rem 0 0 3rem;
-  }
-  .name-header {
-    line-height: 5rem;
-  }
+/* TECHSKILLS  */
 
-  .resume-buttons-container {
-    width: 80%;
-  }
-
-  #border {
-    border-bottom: solid 3px var(--primary-light);
-    position: absolute;
-    right: -7px;
-    width: 20px;
-    animation: animated-cursor 600ms steps(35, end) infinite;
-  }
-  @keyframes animated-text {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 260px;
-    }
-  }
+.techskills {
+  padding: 0 0 8rem;
 }
 
-/* TECHSKILLS  */
+.techskills-about {
+  width: 50%;
+}
+
+/* LOGO GRID STYLING */
 
 figure {
   margin: 0;
@@ -356,17 +328,10 @@ figure {
   min-height: 40px;
   border-radius: 10px;
   margin-bottom: 2em;
-  transition: transform 0.2s, opacity 1.2s;
 }
 
 .techskills__img {
   height: 38px;
-}
-
-@media (min-width: 550px) {
-  .techskills__img {
-    height: 64px;
-  }
 }
 
 /* vp width sizes:
@@ -458,14 +423,20 @@ figure {
 
 /* CONTACT FORM STYLING */
 
-.contact-form {
-  width: 100%;
+.contact {
+  padding: 4rem 0.2rem 8rem;
+}
 
+.contact__title {
+}
+
+.contact__form {
   padding: 0 0.2rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   border-radius: 10px;
+  max-width: 475px;
 }
 
 input,
@@ -485,4 +456,17 @@ textarea {
   width: 75%;
   align-self: center;
   margin-top: 2rem;
+}
+
+@media (min-width: 950px) {
+  .contact__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact__about {
+    width: 45%;
+  }
+  .contact__form {
+    width: 75%;
+  }
 }
