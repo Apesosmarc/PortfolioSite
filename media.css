@@ -40,22 +40,22 @@
     flex-direction: row;
     align-items: start;
   }
-  .title-section {
+  .hero__title-section {
     justify-content: center;
     align-items: center;
     text-align: left;
     width: 35%;
     border-right: 1px solid var(--primary-light);
   }
-  .info-section {
+  .hero__info-section {
     width: 60%;
     padding: 1rem 0 0 3rem;
   }
-  .name-header {
+  .hero__name-header {
     line-height: 5rem;
   }
 
-  .resume-buttons-container {
+  .hero__resume-buttons-container {
     width: 80%;
   }
 
@@ -78,24 +78,24 @@
 
 /* PROJECTS SECTION */
 @media (min-width: 650px) {
-  .project {
+  .projects__project {
     flex-direction: row;
     gap: 4rem;
   }
-  .project-img-container {
+  .projects__img-container {
     max-width: 500px;
   }
-  .project-copy {
+  .projects__copy {
     max-width: 45%;
   }
 }
 
 @media (min-width: 950px) {
-  .project-img-container {
+  .projects__img-container {
     min-width: 450px;
     min-height: 250px;
   }
-  .project-copy {
+  .projects__copy {
     max-width: 25%;
   }
 }
@@ -114,7 +114,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  .techskills-about {
+  .techskills__about-section {
     margin: 2rem 4rem 0 0;
     align-self: start;
   }
