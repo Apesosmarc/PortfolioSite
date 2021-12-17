@@ -226,7 +226,7 @@ nav {
 }
 
 .hero__resume-buttons-container {
-  margin-top: 2rem;
+  margin-top: 1rem;
   align-self: center;
   width: 300px;
 }
@@ -237,16 +237,15 @@ nav {
 }
 
 .typing-animation {
-  /* shorthand for animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
-  /* steps(number of steps, direction) example a clock minute hand would take 60s to move 60 steps to do a 360 rotation */
   height: 32px;
   white-space: nowrap;
   overflow: hidden;
-
   font-size: 16px;
   color: var(--primary-light);
   position: relative;
+  /* animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
   animation: animated-text 2000ms steps(30, end) 1s 1 normal both;
+  /* steps(number of steps, direction) */
 }
 
 #border {
