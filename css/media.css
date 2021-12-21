@@ -33,6 +33,7 @@
 
 @media (min-width: 650px) {
   .hero {
+    height: 75vh;
     padding-top: 5rem;
     display: flex;
     flex-direction: row;
