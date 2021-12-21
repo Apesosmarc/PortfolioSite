@@ -394,13 +394,13 @@ figure {
 }
 
 .projects__img-container--nhl {
-  background-image: url("./images/appimages/nhlapp.jpg");
+  background-image: url("../images/appimages/nhlapp.jpg");
 }
 .projects__img-container--stonks {
-  background-image: url("./images/appimages/stonkwatchList.jpg");
+  background-image: url("../images/appimages/stonkwatchList.jpg");
 }
 .projects__img-container--blackjack {
-  background-image: url("./images/appimages/blackjack.jpg");
+  background-image: url("../images/appimages/blackjack.jpg");
 }
 
 .projects__skills-list {
