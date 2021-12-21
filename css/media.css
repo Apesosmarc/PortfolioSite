@@ -21,6 +21,7 @@
     grid-template-areas:
       ". header header header ."
       ". hero hero hero ."
+      ". slidein-container slidein-container slidein-container ."
       ". techskills techskills techskills ."
       "projects projects projects projects projects"
       ". contact contact contact ."
@@ -33,7 +34,6 @@
 @media (min-width: 650px) {
   .hero {
     padding-top: 5rem;
-    height: 90vh;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -71,11 +71,24 @@
   }
 }
 
-/* BORDER-RIGHT WAS CLIPPING BETWEEN 650-800PX */
+/* HERO BORDER-RIGHT WAS CLIPPING BETWEEN 650-800PX */
 
 @media (min-width: 800px) {
   .hero__title-section {
     padding-right: 0;
+  }
+}
+
+/* SLIDEIN ANIMATIONS */
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    margin-left: -1000px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
   }
 }
 
