@@ -52,16 +52,18 @@ header {
 
 .hero {
   grid-area: hero;
-  height: 75vh;
+  height: 75%;
 }
 
 /* text scroll-animation slidein parent container */
 .slidein-container {
+  padding: 3rem 0;
   width: 100%;
   height: 200px;
   grid-area: slidein-container;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .techskills {
