@@ -44,3 +44,11 @@ REACT - EXPRESS - NEXT.JS - GIT
 -- projects
 -- contact
 -- footer
+
+    TODO
+
+-- Social SVG icons
+-- Fix Button text
+-- Add padding to projects
+-- create go to top button
+--Footer eleme

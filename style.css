@@ -19,6 +19,13 @@ body {
 img {
   width: auto;
 }
+
+/* SVG STYLE */
+
+.filter-primary-light {
+  filter: invert(98%) sepia(4%) saturate(1309%) hue-rotate(354deg)
+    brightness(93%) contrast(102%);
+}
 /* MAIN LAYOUT */
 
 .main-grid {
@@ -31,28 +38,12 @@ img {
   grid-template-areas:
     ". header ."
     ". hero ."
+    ". slidein-container ."
     ". techskills ."
     "projects projects projects"
     ". contact ."
     ". footer .";
 }
-
-/* @media (min-width: 600px) {
-  .main-grid {
-    grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(
-        1em,
-        1fr
-      );
-
-    grid-template-areas:
-      ". header header header ."
-      ". hero hero hero ."
-      ". techskills techskills techskills ."
-      "projects projects projects projects projects"
-      ". contact contact contact ."
-      ". footer footer footer .";
-  }
-} */
 
 header {
   grid-area: header;
@@ -62,6 +53,16 @@ header {
 .hero {
   grid-area: hero;
   height: 90vh;
+}
+
+/* text scroll-animation slidein parent container */
+.slidein-container {
+  width: 100%;
+  height: 300px;
+  margin: 50px 0;
+  grid-area: slidein-container;
+  display: flex;
+  justify-content: center;
 }
 
 .techskills {
@@ -136,12 +137,13 @@ button {
 }
 
 .btn {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   border-radius: 30px;
   padding: 0.75rem 1.5rem;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .btn--light {
@@ -171,9 +173,12 @@ button {
 /* HEADER */
 
 nav {
-  padding: 2em 0;
   display: flex;
   justify-content: space-between;
+}
+
+.navbar {
+  padding: 2em 0;
 }
 
 .navbar__item-container {
@@ -181,6 +186,7 @@ nav {
   flex-direction: column;
   position: relative;
   padding: 0.5em;
+  cursor: pointer;
 }
 
 .navbar__item {
@@ -226,14 +232,17 @@ nav {
 }
 
 .hero__resume-buttons-container {
-  margin-top: 1rem;
   align-self: center;
   width: 300px;
+  padding: 1rem 0;
 }
 
 .hero__social-icons-nav {
   display: flex;
   justify-content: space-evenly;
+  width: 200px;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 .typing-animation {
@@ -244,7 +253,7 @@ nav {
   color: var(--primary-light);
   position: relative;
   /* animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
-  animation: animated-text 2000ms steps(30, end) 1s 1 normal both;
+  animation: typing-text 1900ms steps(30, end) 1s 1 normal both;
   /* steps(number of steps, direction) */
 }
 
@@ -256,9 +265,9 @@ nav {
   animation: animated-cursor 600ms steps(35, end) infinite;
 }
 
-/* text animation */
+/* typing text animation */
 
-@keyframes animated-text {
+@keyframes typing-text {
   0% {
     width: 0;
   }
@@ -267,7 +276,7 @@ nav {
   }
 }
 
-/* cursor animations */
+/* cursor animations -- flashing */
 @keyframes animated-cursor {
   from {
     border-bottom-color: var(--primary-light);
@@ -278,6 +287,23 @@ nav {
 }
 
 /* TECHSKILLS  */
+
+.slidein-text {
+  margin-bottom: 5rem;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  animation: slide 2s 1;
+}
+
+@keyframes slide {
+  from {
+    margin-left: -800px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
 
 .techskills {
   padding: 0 0 8rem;
@@ -332,6 +358,12 @@ figure {
 
 /* PROJECTS */
 
+.projects__project-title,
+.projects__skills-list,
+.projects__description {
+  padding: 0 0 1rem;
+}
+
 .projects__project {
   display: flex;
   justify-content: center;
@@ -339,6 +371,7 @@ figure {
   align-items: center;
   margin: 0 auto;
   width: 100%;
+  padding: 2em 0;
   /* max-width: 75%; */
 }
 
@@ -358,6 +391,7 @@ figure {
   background-size: cover;
   max-width: 350px;
   box-shadow: rgb(0 0 0) 0px 5px 10px 0px;
+  margin-bottom: 1rem;
 }
 
 .projects__img-container--nhl {
@@ -374,7 +408,6 @@ figure {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
 }
 
 .projects__skill {
