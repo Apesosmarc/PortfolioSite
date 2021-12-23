@@ -105,6 +105,9 @@
   .projects__copy {
     max-width: 45%;
   }
+  .hero__resume-buttons-container {
+    align-self: start;
+  }
 }
 
 @media (min-width: 950px) {

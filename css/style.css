@@ -102,7 +102,9 @@ h3 {
   margin: 0;
 }
 
-h2 {
+.tagline2 {
+  margin: 0;
+  opacity: 0.98;
 }
 
 .hero__name-header {
@@ -118,6 +120,10 @@ h2 {
   font-size: 0.9rem;
   opacity: 0.9;
   letter-spacing: 1px;
+}
+
+.techskills__headline {
+  font-style: italic;
 }
 
 .projects__title,
@@ -236,6 +242,7 @@ nav {
   align-self: center;
   width: 300px;
   padding: 1rem 0;
+  margin-top: 2rem;
 }
 
 .hero__social-icons-nav {
@@ -254,7 +261,7 @@ nav {
   color: var(--primary-light);
   position: relative;
   /* animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
-  animation: typing-text 1900ms steps(30, end) 1s 1 normal both;
+  animation: typing-text 1000ms steps(30, end) 1s 1 normal both;
   /* steps(number of steps, direction) */
 }
 
@@ -273,7 +280,7 @@ nav {
     width: 0;
   }
   100% {
-    width: 270px;
+    width: 145px;
   }
 }
 
@@ -350,10 +357,9 @@ figure {
   height: 38px;
 }
 
-/* vp width sizes:
--- small //<550px
---  medium
--- large */
+.techskills__copy {
+  margin-top: 2rem;
+}
 
 /* PROJECTS */
 
