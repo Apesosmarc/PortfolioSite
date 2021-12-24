@@ -82,14 +82,9 @@
 
 /* SLIDEIN ANIMATIONS */
 
-@keyframes slide {
-  from {
-    opacity: 0;
-    margin-left: -1000px;
-  }
-  to {
-    opacity: 1;
-    margin-left: 0;
+@media (min-width: 850px) {
+  .slidein-text {
+    display: none;
   }
 }
 
@@ -131,6 +126,8 @@
 @media (min-width: 1300px) {
   .techskills__about-section {
     width: 50%;
+    display: none;
+    max-width: 396px;
   }
   .techskills {
     display: flex;
@@ -144,7 +141,6 @@
 
   .techskills__container {
     min-width: 500px;
+    margin: 0;
   }
 }
-
-/* CONTACT STYLING */
