@@ -120,6 +120,8 @@ h3 {
   font-size: 0.9rem;
   opacity: 0.9;
   letter-spacing: 1px;
+  display: inline-block;
+  min-width: 155px;
 }
 
 .techskills__headline {

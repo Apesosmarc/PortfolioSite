@@ -55,6 +55,10 @@
     line-height: 5rem;
   }
 
+  .hero__name-title {
+    min-width: 145px;
+  }
+
   #border {
     border-bottom: solid 3px var(--primary-light);
     position: absolute;
