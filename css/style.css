@@ -473,3 +473,15 @@ textarea {
   align-self: center;
   margin-top: 2rem;
 }
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > * {
+  margin-bottom: 1.5rem;
+}
