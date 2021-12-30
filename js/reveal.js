@@ -6,7 +6,6 @@ const techSkillsAbout = document.querySelector(".techskills__about-section");
 const slideIn = document.querySelector(".slidein-text");
 
 const calculateScrollHeight = () => {
-  console.log(window.innerWidth, window.outerWidth);
   if (window.innerWidth < 1290) return false;
 
   const windowHeight = window.innerHeight;

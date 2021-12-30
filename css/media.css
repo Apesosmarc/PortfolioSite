@@ -137,6 +137,10 @@
   .slidein-text {
     display: none;
   }
+
+  .techskills__container {
+    display: none;
+  }
 }
 
 @media (min-width: 1300px) {
