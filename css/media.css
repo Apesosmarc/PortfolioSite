@@ -113,6 +113,22 @@
   }
 }
 
+/* CONTACT STYLES  -- FLEXES TO MIDDLE*/
+@media (min-width: 950px) {
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact__about {
+    width: 45%;
+  }
+  .contact__form {
+    width: 75%;
+  }
+}
+
 /*------------------- 1050PX+ ---------------*/
 
 /* SLIDEIN ANIMATIONS */

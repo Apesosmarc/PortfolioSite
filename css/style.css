@@ -473,16 +473,3 @@ textarea {
   align-self: center;
   margin-top: 2rem;
 }
-
-@media (min-width: 950px) {
-  .contact__container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .contact__about {
-    width: 45%;
-  }
-  .contact__form {
-    width: 75%;
-  }
-}
