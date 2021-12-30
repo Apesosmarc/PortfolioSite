@@ -1,16 +1,14 @@
-/* FONT STYLES */
-
-@media (min-width: 950px) {
-  p {
-    font-size: 1.125rem;
-  }
-  h2 {
-    font-size: 2rem;
+/*------------------- <=550PX ---------------*/
+/* BUMPS HEIGHT ON TECH LOGOS*/
+@media (min-width: 550px) {
+  .techskills__img {
+    height: 64px;
   }
 }
 
-/* MAIN GRID LAYOUT */
+/*------------------- 650PX ---------------*/
 
+/* MAIN GRID LAYOUT -- THREE-COL LAYOUT TRANSITION*/
 @media (min-width: 650px) {
   .main-grid {
     grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(
@@ -29,8 +27,7 @@
   }
 }
 
-/* HERO SECTION  */
-
+/* HEROSECTION -- SPLITS TO ROW WITH DIVIDER*/
 @media (min-width: 650px) {
   .hero {
     height: 75vh;
@@ -56,7 +53,6 @@
   }
 
   .hero__name-title {
-    min-width: 145px;
   }
 
   #border {
@@ -66,33 +62,9 @@
     width: 20px;
     animation: animated-cursor 600ms steps(35, end) infinite;
   }
-  @keyframes animated-text {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 260px;
-    }
-  }
 }
 
-/* HERO BORDER-RIGHT WAS CLIPPING BETWEEN 650-800PX */
-
-@media (min-width: 800px) {
-  .hero__title-section {
-    padding-right: 0;
-  }
-}
-
-/* SLIDEIN ANIMATIONS */
-
-@media (min-width: 850px) {
-  .slidein-text {
-    display: none;
-  }
-}
-
-/* PROJECTS SECTION */
+/* PROJECTS SECTION -- PROJECT SECTION IMAGES/TEXT GO SIDE BY SIDE */
 @media (min-width: 650px) {
   .projects__project {
     flex-direction: row;
@@ -109,6 +81,28 @@
   }
 }
 
+/*------------------- 800PX ---------------*/
+
+/* HERO BORDER-RIGHT WAS CLIPPING BETWEEN 650-800PX */
+@media (min-width: 800px) {
+  .hero__title-section {
+    padding-right: 0;
+  }
+}
+
+/*------------------- 950PX ---------------*/
+
+/* FONT STYLES -- DESKTOP TXT BUMP */
+@media (min-width: 950px) {
+  p {
+    font-size: 1.125rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* SOME TECH-LOGOS WERE SMALLER THAN OTHERS */
 @media (min-width: 950px) {
   .projects__img-container {
     min-width: 450px;
@@ -119,11 +113,13 @@
   }
 }
 
-/* TECHSKILLS SECTION */
+/*------------------- 1050PX+ ---------------*/
 
-@media (min-width: 550px) {
-  .techskills__img {
-    height: 64px;
+/* SLIDEIN ANIMATIONS */
+
+@media (min-width: 1300px) {
+  .slidein-text {
+    display: none;
   }
 }
 

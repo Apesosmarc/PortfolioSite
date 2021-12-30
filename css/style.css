@@ -120,8 +120,7 @@ h3 {
   font-size: 0.9rem;
   opacity: 0.9;
   letter-spacing: 1px;
-  display: inline-block;
-  min-width: 155px;
+  max-width: 155px;
 }
 
 .techskills__headline {
@@ -263,8 +262,19 @@ nav {
   color: var(--primary-light);
   position: relative;
   /* animation-name, duration, timing, delay, iteration count, direction, fill and play state*/
-  animation: typing-text 1000ms steps(30, end) 1s 1 normal both;
+  animation: typing-text 1200ms steps(20, end) 1s 1 normal both;
   /* steps(number of steps, direction) */
+}
+
+/* typing text animation */
+
+@keyframes typing-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 145px;
+  }
 }
 
 #border {
@@ -273,17 +283,6 @@ nav {
   right: -7px;
   width: 20px;
   animation: animated-cursor 600ms steps(35, end) infinite;
-}
-
-/* typing text animation */
-
-@keyframes typing-text {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 145px;
-  }
 }
 
 /* cursor animations -- flashing */
