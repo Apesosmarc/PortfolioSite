@@ -9,6 +9,7 @@ body {
   background-color: var(--primary-dark);
   color: var(--primary-light);
   font-family: "Poppins", sans-serif;
+  min-width: 370px;
 }
 
 /* should remove orange outline on inputs */
@@ -403,7 +404,7 @@ figure {
 
 .projects__img-container {
   min-height: 200px;
-  min-width: 300px;
+  min-width: 370px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
