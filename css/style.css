@@ -3,6 +3,10 @@
   --primary-light: #f0edcc;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -15,6 +19,11 @@ body {
 /* should remove orange outline on inputs */
 *:focus {
   outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-light);
 }
 
 img {
