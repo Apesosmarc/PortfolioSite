@@ -422,6 +422,11 @@ figure {
 .projects__img-container--blackjack {
   background-image: url("../images/appimages/blackjack.jpg");
 }
+.projects__img-container--nextflix {
+  background-image: url("../images/appimages/nextflix-desktop.jpg");
+  background-size: cover;
+  background-position: left;
+}
 
 .projects__skills-list {
   list-style: none;
