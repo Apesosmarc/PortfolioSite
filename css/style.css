@@ -14,6 +14,7 @@ body {
   color: var(--primary-light);
   font-family: "Poppins", sans-serif;
   min-width: 370px;
+  overflow-x: hidden;
 }
 
 /* should remove orange outline on inputs */
