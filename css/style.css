@@ -387,9 +387,12 @@ figure {
 /* PROJECTS */
 
 .projects__project-title,
-.projects__skills-list,
-.projects__description {
+.projects__skills-list {
   padding: 0 0 1rem;
+}
+
+.projects__description {
+  padding-bottom: 2.75rem;
 }
 
 .projects__project {
