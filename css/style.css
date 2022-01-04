@@ -199,14 +199,6 @@ nav {
   padding: 2em 0;
 }
 
-.navbar__item-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 0.5em;
-  cursor: pointer;
-}
-
 .navbar__item {
   font-size: 0.9rem;
   font-weight: 700;
@@ -216,7 +208,19 @@ nav {
   text-transform: uppercase;
 }
 
-.navbar__item-container::after {
+/* ---UNDERLINE ANIMATION FOR LINKS, INCLUDES BACK TO TOP BTN IN FOOTER--- */
+
+.navbar__item-container,
+.footer__btn-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.navbar__item-container::after,
+.footer__btn-container::after {
   content: "";
   position: absolute;
   width: 0;
@@ -228,7 +232,8 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar__item-container:hover::after {
+.navbar__item-container:hover::after,
+.footer__btn-container:hover::after {
   visibility: visible;
   width: 100%;
 }
