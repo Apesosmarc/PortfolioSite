@@ -477,6 +477,7 @@ figure {
   gap: 0.3rem;
   border-radius: 10px;
   max-width: 475px;
+  margin: 0 auto;
 }
 
 input,
