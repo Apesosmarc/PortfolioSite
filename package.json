@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "concurrently \"postcss ./tailwind.css -o css/build.css --watch\"  \"live-server ./docs \"",
-    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css",
+    "serve": "concurrently \"postcss ./tailwind.css -o css/build.css --watch\"  \"live-server \"",
+    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./css/build.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
