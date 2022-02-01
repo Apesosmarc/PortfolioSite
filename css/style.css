@@ -113,6 +113,10 @@ h3 {
   margin: 0;
 }
 
+.red-text {
+  color: red;
+}
+
 .tagline2 {
   margin: 0;
   opacity: 0.98;
