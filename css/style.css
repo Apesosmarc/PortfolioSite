@@ -445,9 +445,9 @@ figure {
   background-image: url("../images/appimages/blackjack.jpg");
 }
 .projects__img-container--nextflix {
-  background-image: url("../images/appimages/nextflix-desktop.jpg");
+  background-image: url("../images/appimages/tuesdayDesktop.jpg");
   background-size: cover;
-  background-position: left;
+  background-position: top;
 }
 
 .projects__skills-list {
